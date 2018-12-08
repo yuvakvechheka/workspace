@@ -1,0 +1,37 @@
+Windows-IP-Konfiguration
+
+Ethernet-Adapter Ethernet 2:
+
+   Medienstatus. . . . . . . . . . . : Medium getrennt
+   Verbindungsspezifisches DNS-Suffix:
+
+Ethernet-Adapter Ethernet:
+
+   Verbindungsspezifisches DNS-Suffix: home
+   IPv6-Adresse. . . . . . . . . . . : 2a02:8109:c40:6cb5:1061:a31f:40b7:14f7
+   Temporäre IPv6-Adresse. . . . . . : 2a02:8109:c40:6cb5:992b:c7c3:c798:c326
+   Verbindungslokale IPv6-Adresse  . : fe80::1061:a31f:40b7:14f7%4
+   IPv4-Adresse  . . . . . . . . . . : 192.168.0.12
+   Subnetzmaske  . . . . . . . . . . : 255.255.255.0
+   Standardgateway . . . . . . . . . : fe80::ae22:5ff:fe18:9d91%4
+                                       192.168.0.1
+
+Drahtlos-LAN-Adapter Wi-Fi:
+
+   Medienstatus. . . . . . . . . . . : Medium getrennt
+   Verbindungsspezifisches DNS-Suffix: home
+
+Drahtlos-LAN-Adapter Local Area Connection* 2:
+
+   Medienstatus. . . . . . . . . . . : Medium getrennt
+   Verbindungsspezifisches DNS-Suffix:
+
+Drahtlos-LAN-Adapter Local Area Connection* 3:
+
+   Medienstatus. . . . . . . . . . . : Medium getrennt
+   Verbindungsspezifisches DNS-Suffix:
+
+Ethernet-Adapter Ethernet 3:
+
+   Medienstatus. . . . . . . . . . . : Medium getrennt
+   Verbindungsspezifisches DNS-Suffix:
