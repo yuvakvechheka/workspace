@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Uebung/Uebung3.2/Untitled1.xsd&apos; to &apos;distance.xsd&apos;" description="Rename resource &apos;Untitled1.xsd&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Uebung3.2/Untitled1.xsd" name="distance.xsd" stamp="1542724279131" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Uebung/Uebung3.2&apos; to &apos;Uebung3&apos;" description="Rename resource &apos;Uebung3.2&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Uebung3.2" name="Uebung3" stamp="1542803240919" updateReferences="true"/>
+</session>

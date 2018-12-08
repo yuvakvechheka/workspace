@@ -1,0 +1,82 @@
+package saxAPI;
+
+import java.util.ArrayList;
+
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
+import org.xml.sax.Attributes;
+import org.xml.sax.ContentHandler;
+import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
+import org.xml.sax.helpers.DefaultHandler;
+
+public class Inspector extends DefaultHandler {
+	boolean flag, children, children_firstname, person;
+	ArrayList<Person> allPersons = new ArrayList<>();
+	Person currentPerson, parent;
+
+	public void startDocument() throws SAXException {
+	}
+
+	public void endDocument() throws SAXException {
+
+	}
+
+	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+
+		flag = localName.equals("firstname");
+
+		if (localName.equals("children"))
+			children = true;
+
+		children_firstname = localName.equals("firstname") && children;
+
+		if (localName.equals("person"))
+			person = !person;
+	}
+
+	public void endElement(String uri, String localName, String qName) throws SAXException {
+		if (localName.equals("children"))
+			children = false;
+	}
+
+	public void ignorableWhitespace(char[] ch, int start, int length) throws SAXException {
+	}
+
+	public void characters(char[] ch, int start, int length) throws SAXException {
+		if (flag)
+			System.out.println("Firstname:  " + new String(ch, start, length));
+		if (children_firstname)
+			System.out.println("children firstname:  " + new String(ch, start, length));
+
+	}
+
+	public void startPrefixMapping(String prefix, String uri) {
+		System.out.println("startPrefixMapping");
+	}
+
+	public void endPrefixMapping(String prefix) {
+		System.out.println("endPrefixMapping");
+	}
+
+	public static void main(String[] args) throws Exception {
+
+		// 1. Instanz des ContentHandlers erzeugen
+		ContentHandler contentHandler = new Inspector();
+
+		// 2. SAX-Treiber erzeugen
+		SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
+		saxParserFactory.setNamespaceAware(true);
+		SAXParser parser = saxParserFactory.newSAXParser();
+		XMLReader xmlReader = parser.getXMLReader();
+
+		// 3. Call-back für ContentHandler setzen
+		xmlReader.setContentHandler(contentHandler);
+
+		// 4. Verarbeitung starten
+		xmlReader.parse("src/saxAPI/persons.xml");
+
+	}
+
+}

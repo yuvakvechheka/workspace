@@ -1,0 +1,23 @@
+package saxAPI;
+
+public class ContentHandler {
+	public static void main(String[] args) throws Exception {
+		
+		// 1. Instanz des ContentHandlers erzeugen
+		ContentHandler contentHandler = new Inspector();
+		
+		// 2. SAX-Treiber erzeugen
+		saxParserFactory = SAXParserFactory.newInstance();
+		saxParserFactory.setNamespaceAware(true);
+		SAXParser parser = saxParserFactory.newSAXParser();
+		XMLReader xmlReader = parser.getXMLReader();
+		
+		// 3. Call-back f¨ur ContentHandler setzen
+		xmlReader.setContentHandler(contentHandler);
+		
+		// 4. Verarbeitung starten
+		xmlReader.parse(args[0]);
+
+	}
+
+}

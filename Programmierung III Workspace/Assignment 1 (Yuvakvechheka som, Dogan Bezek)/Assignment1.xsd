@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+    
+    <!-- Element Labor anlegen -->
+    <xs:element name="labor">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="rechner" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="software" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="geräte"/>
+            </xs:sequence>
+            <!-- Atrribute von Labor spezifizieren -->
+            <xs:attribute name="raumnummer" type="xs:ID" use="required"/>
+            <xs:attribute name="name" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Element Rechner anlegen -->
+    <xs:element name="rechner">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="betriebssystem" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="anschaffungsdatum" type="xs:date"></xs:element>
+                <xs:element name="anwendungssoftware" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="erweiterung">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="beschreibung"/>
+                            <xs:element ref="besonderheit" minOccurs="0"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <!--  -->
+            <xs:attribute name="key" use="required" type="xs:ID"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Element Software anlegen -->
+    <xs:element name="software">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="beschreibung"/>
+                <xs:element ref="besonderheit" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="key" use="required" type="xs:ID"/>
+            <xs:attribute name="name" type="xs:string"/>
+            <xs:attribute name="lizenz" type="xs:boolean" default="true"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Element Geräte anlegen -->
+    <xs:element name="geräte">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Scanner -->
+                <xs:element name="scanner">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Scannermodel min. 1 -->
+                            <xs:element name="model" maxOccurs="1"/>
+                            <xs:element ref="beschreibung"/>
+                            <xs:element ref="besonderheit" minOccurs="0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="drucker">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Drucker -->
+                            <xs:element name="model" maxOccurs="1"/>
+                            <xs:element ref="beschreibung"/>
+                            <xs:element ref="besonderheit" minOccurs="0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Element Beschreibung anlegen -->
+    <xs:element name="beschreibung">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element name="festplatte" minOccurs="0">
+                    <xs:complexType>
+                        <xs:attribute name="size" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="speicher" minOccurs="0">
+                    <xs:complexType>
+                        <xs:attribute name="size" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="hersteller" type="xs:string" minOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Besonderheiten anlegen -->
+    <xs:element name="besonderheit" type="xs:string"/>
+    
+    <!-- Element Labore anlegen -->
+    <xs:element name="labore">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Element Labore muss mindestens ein Labor Element haben-->
+                <xs:element ref="labor" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+        <!-- ID für Rechner verbinden -->
+        <xs:key name="id_rechner">
+            <xs:selector xpath="./rechner"/>
+            <xs:field xpath="@key"/>
+        </xs:key>
+        <!-- ID für Software verbinden -->
+        <xs:key name="id_software">
+            <xs:selector xpath="./software"/>
+            <xs:field xpath="@key"/>
+        </xs:key>
+    </xs:element>
+    
+</xs:schema>

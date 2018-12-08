@@ -1,0 +1,8 @@
+package saxAPI;
+
+public class Person {
+	public String firstname="", 
+	lastname="",
+	residence="";
+	public boolean children=false;	
+}

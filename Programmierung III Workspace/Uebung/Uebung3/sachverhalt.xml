@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="sachverhalt.xsd">
+    <personal>
+        <mitarbeiter name="Meier" vorname="Tom" vorgesetzer="M01">
+            <kennung>M01</kennung>
+        </mitarbeiter>
+        <mitarbeiter name="Gutelkin" vorname="Sahin" vorgesetzer="M02">
+            <kennung>M02</kennung>
+        </mitarbeiter>
+        <mitarbeiter name="Malte" vorname="Fridrich" vorgesetzer="M03">
+            <kennung>M03</kennung>
+        </mitarbeiter>
+    </personal>
+    <task>
+        <declaration name="Prog3"/>
+        <deadline datum="2018-10-11"/>
+    </task>
+    <teams>
+        <team>
+            <id>T02</id>
+            <leiter kennung="M01"/>
+            <mitglieder kennung="M01"/>
+            <subtask declaration="DTD Vorbereiten"/>
+        </team>
+        <team>
+            <id>T03</id>
+            <leiter kennung="M01"/>
+            <mitglieder kennung="M01"/>
+            <subtask declaration="XML Erstellen"/>
+        </team>
+    </teams>
+</projekt>

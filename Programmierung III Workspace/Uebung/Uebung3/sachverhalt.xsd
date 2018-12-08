@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="projekt">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="personal">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="mitarbeiter" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="kennung" type="xs:ID"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                    <xs:attribute name="vorname" type="xs:string" use="optional"/>
+                                    <xs:attribute name="vorgesetzer" type="xs:IDREF" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="task">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="declaration">
+                                <xs:complexType>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="deadline">
+                                <xs:complexType>
+                                    <xs:attribute name="datum" type="xs:date" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="teams" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                            <xs:element name="team" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="id" type="teamID"/>
+                                        <xs:element name="leiter" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:attribute name="kennung" type="xs:IDREF" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="mitglieder" minOccurs="1" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="kennung" type="xs:IDREF" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="subtask">
+                                            <xs:complexType>
+                                                <xs:attribute name="declaration" type="xs:string" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:unique name="uniquetem">
+                        <xs:selector xpath="./team"></xs:selector>
+                        <xs:field xpath="@id"></xs:field>
+                    </xs:unique>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="globalid">
+            <xs:selector xpath="./personal/mitarbeiter/kennung|./teams/team/id"/>
+            <xs:field xpath="."/>
+        </xs:unique>
+    </xs:element>
+    <xs:simpleType name="teamID">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="T[0-9][0-9]"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

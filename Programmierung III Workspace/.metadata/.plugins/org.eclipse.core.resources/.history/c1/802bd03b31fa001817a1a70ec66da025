@@ -1,0 +1,97 @@
+package saxAPI;
+
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
+import org.xml.sax.Attributes;
+import org.xml.sax.ContentHandler;
+import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
+import org.xml.sax.helpers.DefaultHandler;
+
+public class Inspector extends DefaultHandler {
+	private int paraCount;
+	boolean flag = false;
+	boolean children = false;
+	boolean children_firstname = false;
+	
+
+	/* methods of org.xml.sax.ContentHandler */
+	public void startDocument() throws SAXException {
+		// System.out.println("Start document detected");
+		paraCount = 0;
+	}
+
+	public void endDocument() throws SAXException {
+		// System.out.println("End document detected; " + "total number of para elements
+		// found: " + paraCount);
+	}
+
+	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+		// System.out.println("start of element detected: " + qName);
+//// Attribute ausgeben
+//		if (attributes.getLength() > 0) {
+//			System.out.print("containing attributes:");
+//			for (int i = 0; i < attributes.getLength(); i++) {
+//				System.out.print(" " + attributes.getQName(i) + "=" + attributes.getValue(i));
+//			}
+//			System.out.println();
+//		}
+//	// evtl. para-Zaehler erhoehen
+
+		flag = localName.equals("firstname");
+
+		if (localName.equals("children"))
+			children = true;
+
+		children_firstname = localName.equals("firstname") && children;
+	}
+
+	public void endElement(String uri, String localName, String qName) throws SAXException {
+	//	System.out.println("end of element detected: " + qName);
+		if (localName.equals("children"))
+			children = false;
+
+	}
+
+	public void ignorableWhitespace(char[] ch, int start, int length) throws SAXException {
+		// System.out.println("Ignorabled white spaces detected");
+	}
+
+	public void characters(char[] ch, int start, int length) throws SAXException {
+		if (flag)
+			System.out.println("Firstname:  " + new String(ch, start, length));
+		if (children_firstname)
+			System.out.println("children firstname:  " + new String(ch, start, length));
+
+		// System.out.println("Charcters detected: " + new String(ch, start, length));
+	}
+
+	public void startPrefixMapping(String prefix, String uri) {
+		System.out.println("startPrefixMapping");
+	}
+
+	public void endPrefixMapping(String prefix) {
+		System.out.println("endPrefixMapping");
+	}
+
+	public static void main(String[] args) throws Exception {
+
+		// 1. Instanz des ContentHandlers erzeugen
+		ContentHandler contentHandler = new Inspector();
+
+		// 2. SAX-Treiber erzeugen
+		SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
+		saxParserFactory.setNamespaceAware(true);
+		SAXParser parser = saxParserFactory.newSAXParser();
+		XMLReader xmlReader = parser.getXMLReader();
+
+		// 3. Call-back für ContentHandler setzen
+		xmlReader.setContentHandler(contentHandler);
+
+		// 4. Verarbeitung starten
+		xmlReader.parse("src/saxAPI/persons.xml");
+
+	}
+
+}

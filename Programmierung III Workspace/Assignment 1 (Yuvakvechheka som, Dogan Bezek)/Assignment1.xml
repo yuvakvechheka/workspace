@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Assignment1.xsl"?>
+<labore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file:/Users/yuvakvechhekasom/Programmierung%20III%20Workspace/Assignment%201%20(Yuvakvechheka%20som,%20Dogan%20Bezek)/Assignment1.xsd">
+    
+    <!-- Projektraum Umland -->
+    <labor raumnummer="Z2001" name="ProjektraumU">
+        
+        <!-- Rechner Mac -->
+        <rechner key="S111">
+            <betriebssystem>IOS 10.2</betriebssystem>
+            <anschaffungsdatum>2016-01-01</anschaffungsdatum>
+            <anwendungssoftware>Hallo</anwendungssoftware>
+            <erweiterung>
+                <beschreibung>
+                    <festplatte size="1TB"/>
+                    <speicher size="8GB"/>
+                    <hersteller>Apple</hersteller>
+                </beschreibung>
+            </erweiterung>
+        </rechner>
+        
+        <!-- Rechner Lenovo -->
+        <rechner key="R002">
+            <betriebssystem>Windows 10</betriebssystem>
+            <anschaffungsdatum>2018-01-01</anschaffungsdatum>
+            <anwendungssoftware>Microsoft Office</anwendungssoftware>
+            <erweiterung>
+                <beschreibung>
+                    <festplatte size="1TB"/>
+                    <speicher size="8GB"/>
+                    <hersteller>Lenovo</hersteller>
+                </beschreibung>
+                <besonderheit>Mickey Mouse Sticker</besonderheit>
+            </erweiterung>
+        </rechner>
+        
+        <!-- Sofware Blender  -->
+        <software key="S001" name="Blender" lizenz="true">
+                <beschreibung>
+                    <hersteller>Blender Foundation</hersteller>
+                </beschreibung>
+                <besonderheit>Vorab Version seit 20.Juni 2017</besonderheit>
+            
+        </software>
+        
+        <!-- Sofware Itunes -->
+        <software key="S002" name="Itunes" lizenz="true">
+            <beschreibung>
+                <hersteller>Apple</hersteller>
+            </beschreibung>
+        </software>
+        
+        <!-- Geräte im ProjektraumU -->
+        <geräte>
+            <!-- Scanner Hewlett Packard -->
+            <scanner>
+                <model>HP 6005</model>
+                <beschreibung>
+                    <hersteller>Hewlett Packard</hersteller>
+                </beschreibung>
+            </scanner>
+            
+            <!-- Drucker Brother -->
+            <drucker>
+                <model>Brother 203</model>
+                <beschreibung>
+                    <hersteller>Brother</hersteller>
+                </beschreibung>
+            </drucker>
+        </geräte>
+    </labor>
+    
+    <!-- Projektraum Kelb  -->
+    <labor raumnummer="Z2002" name="ProjektraumK">
+        
+        <!-- Rechner Apple -->
+        <rechner key="R003">
+            <betriebssystem>MacOS Sierra</betriebssystem>
+            <anschaffungsdatum>2017-06-07</anschaffungsdatum>
+            <anwendungssoftware>Eclipse</anwendungssoftware>
+            <erweiterung>
+                <beschreibung>
+                    <festplatte size="4TB"/>
+                    <speicher size="16GB"/>
+                    <hersteller>Apple</hersteller>
+                </beschreibung>
+                <besonderheit>Bildschirm Touchscreen</besonderheit>
+            </erweiterung>
+        </rechner>
+        
+        <!-- Rechner Dell -->
+        <rechner key="R004">
+            <betriebssystem>Linux</betriebssystem>
+            <anschaffungsdatum>2015-10-12</anschaffungsdatum>
+            <anwendungssoftware>SAP</anwendungssoftware>
+            <erweiterung>
+                <beschreibung>
+                    <festplatte size="1TB"/>
+                    <speicher size="16GB"/>
+                    <hersteller>Dell</hersteller>
+                </beschreibung>
+                <besonderheit>Fingerscanner</besonderheit>
+            </erweiterung>
+        </rechner>
+        
+        <!-- Rechner Acer  -->
+        <rechner key="R005">
+            <betriebssystem>Windows 10</betriebssystem>
+            <anschaffungsdatum>2016-02-01</anschaffungsdatum>
+            <anwendungssoftware>Wikitude</anwendungssoftware>
+            <erweiterung>
+                <beschreibung>
+                    <festplatte size="2TB"/>
+                    <speicher size="16GB"/>
+                    <hersteller>Acer</hersteller>
+                </beschreibung>
+                <besonderheit>Doppelmonitor</besonderheit>
+            </erweiterung>
+        </rechner>
+        
+        <!-- Software PyCharm CE -->
+        <software key="S003" name="PyCharm CE" lizenz="true">
+            <beschreibung>
+                <hersteller>PyCharm CE</hersteller>
+            </beschreibung>
+        </software>
+        
+        <!-- Unity -->
+        <software key="S004" name="Unity" lizenz="true">
+            <beschreibung>
+                <hersteller>Unity Technologies</hersteller>
+            </beschreibung>
+        </software>
+        
+        <!-- Geräte im Software-Entwicklungslabor -->
+        <geräte>
+            
+            <!-- Beamer Acer -->
+            <scanner>
+                <model>A547</model>
+                <beschreibung>
+                    <hersteller>Acer</hersteller>
+                </beschreibung>
+            </scanner>
+            
+            <!-- Drucker HP -->
+            <drucker>
+                <model>HP 2003</model>
+                <beschreibung>
+                    <hersteller>Hewlett Packard</hersteller>
+                </beschreibung>
+            </drucker>
+        </geräte>
+    </labor>
+</labore>

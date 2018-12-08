@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Assignment1.xsl"?>
+<hochschule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file:/Users/yuvakvechhekasom/Programmierung%20III%20Workspace/test/schema.xsd">
+
+    <!-- Media Laborraum -->
+    <labor raumnummer="Z2330" name="Media Labor">
+
+        <!-- Rechner Asus -->
+        <rechner schlüssel="M001">
+            <betriebsystem>Windows 10</betriebsystem>
+            <anschaffungsdatum>2016-03-11</anschaffungsdatum>
+            <anwendungssoftware>Microsoft Offices</anwendungssoftware>
+            <anwendungssoftware>Open offices</anwendungssoftware>
+            <erweiterungen>
+                <beschreibung>
+                    <festplatte size="1TB"/>
+                    <speicher size="8GB"/>
+                    <hersteller>Asus</hersteller>
+                </beschreibung>
+            </erweiterungen>
+        </rechner>
+
+        <!-- Rechner Lenovo -->
+        <rechner schlüssel="M002">
+            <betriebsystem>Window 8.1</betriebsystem>
+            <anschaffungsdatum>2015-03-03</anschaffungsdatum>
+            <anwendungssoftware>Adobe Photoshop</anwendungssoftware>
+            <erweiterungen>
+                <beschreibung>
+                    <festplatte size="2TB"/>
+                    <speicher size="16GB"/>
+                    <hersteller>Lenovo</hersteller>
+                </beschreibung>
+            </erweiterungen>
+        </rechner>
+
+        <!-- Rechner Lenovo -->
+        <rechner schlüssel="M003">
+            <betriebsystem>Window 8.1</betriebsystem>
+            <anschaffungsdatum>2015-03-03</anschaffungsdatum>
+            <anwendungssoftware>Adobe After Effect</anwendungssoftware>
+            <erweiterungen>
+                <beschreibung>
+                    <festplatte size="2TB"/>
+                    <speicher size="16GB"/>
+                    <hersteller>Lenovo</hersteller>
+                </beschreibung>
+            </erweiterungen>
+        </rechner>
+
+        <!-- Sofware Adobe Illustrator  -->
+        <software schlüssel="S001" name="Adobe Illustrator" lizenz="true">
+            <beschreibung>
+                <hersteller>Adobe</hersteller>
+            </beschreibung>
+            <besonderheiten>Lizenz läuft in 2017 ab</besonderheiten>
+        </software>
+
+        <!-- Sofware iTune -->
+        <software schlüssel="S002" name="iTune" lizenz="true">
+            <beschreibung>
+                <hersteller>Apple</hersteller>
+            </beschreibung>
+        </software>
+
+        <!-- Geräte im MediaLaborraum -->
+        <geräte>
+
+            <!-- Scanner HP1231 -->
+            <scanner>
+                <model>HP1231</model>
+                <beschreibung>
+                    <hersteller>HP</hersteller>
+                </beschreibung>
+            </scanner>
+
+            <!-- Drucker Epson -->
+            <drucker>
+                <model>EPSON 4in1</model>
+                <beschreibung>
+                    <hersteller>EPSON</hersteller>
+                </beschreibung>
+            </drucker>
+        </geräte>
+    </labor>
+
+    <!-- Software-Entwicklungslabor   -->
+    <labor raumnummer="Z1220" name="Software-Entwicklungslabor">
+
+        <!-- Rechner Apple -->
+        <rechner schlüssel="C001">
+            <betriebsystem>Mac OS</betriebsystem>
+            <anschaffungsdatum>2016-06-07</anschaffungsdatum>
+            <anwendungssoftware>Eclipse</anwendungssoftware>
+            <erweiterungen>
+                <beschreibung>
+                    <festplatte size="512GB"/>
+                    <speicher size="16GB"/>
+                    <hersteller>Apple</hersteller>
+                </beschreibung>
+                <besonderheiten> extern Laufwerk verbinden </besonderheiten>
+            </erweiterungen>
+        </rechner>
+
+        <!-- Rechner Dell -->
+        <rechner schlüssel="C002">
+            <betriebsystem>Linux</betriebsystem>
+            <anschaffungsdatum>2015-10-12</anschaffungsdatum>
+            <anwendungssoftware>Big Data</anwendungssoftware>
+            <erweiterungen>
+                <beschreibung>
+                    <festplatte size="1TB"/>
+                    <speicher size="16GB"/>
+                    <hersteller>Dell</hersteller>
+                </beschreibung>
+            </erweiterungen>
+        </rechner>
+
+        <!-- Rechner Apple -->
+        <rechner schlüssel="C003">
+            <betriebsystem>Mac OS</betriebsystem>
+            <anschaffungsdatum>2015-06-07</anschaffungsdatum>
+            <anwendungssoftware>JCreator</anwendungssoftware>
+            <erweiterungen>
+                <beschreibung>
+                    <festplatte size="1TB"/>
+                    <speicher size="16GB"/>
+                    <hersteller>Apple</hersteller>
+                </beschreibung>
+                <besonderheiten> </besonderheiten>
+            </erweiterungen>
+        </rechner>
+
+        <!-- Rechner Asus (Bildschirm Kaputt) -->
+        <rechner schlüssel="C004">
+            <betriebsystem>Windows 10</betriebsystem>
+            <anschaffungsdatum>2016-02-01</anschaffungsdatum>
+            <anwendungssoftware>Xamarin</anwendungssoftware>
+            <erweiterungen>
+                <beschreibung>
+                    <festplatte size="2TB"/>
+                    <speicher size="16GB"/>
+                    <hersteller>Asus</hersteller>
+                </beschreibung>
+                <besonderheiten>Bildschirm ist Kaputt</besonderheiten>
+            </erweiterungen>
+        </rechner>
+
+        <!-- Software Microsoft Visual Studio -->
+        <software schlüssel="P1241" name="Microsoft Visual Studio" lizenz="true">
+            <beschreibung>
+                <hersteller>Microsoft</hersteller>
+            </beschreibung>
+        </software>
+
+        <!-- Software Android Studio von Google-->
+        <software schlüssel="P1211" name="Android Studio" lizenz="true">
+            <beschreibung>
+                <hersteller>Google</hersteller>
+            </beschreibung>
+        </software>
+
+        <!-- Geräte im Software-Entwicklungslabor -->
+        <geräte>
+
+            <!-- Scanner Canon -->
+            <scanner>
+                <model>Lide 120</model>
+                <beschreibung>
+                    <hersteller>Canon</hersteller>
+                </beschreibung>
+            </scanner>
+
+            <!-- Drucke ESP 7250 von Kodak. Bei dem muss die Tinten ersetzt werden -->
+            <drucker>
+                <model>ESP 7250</model>
+                <beschreibung>
+                    <hersteller>Kodak</hersteller>
+                </beschreibung>
+                <besonderheiten>Tinten muss ersetzt werden</besonderheiten>
+            </drucker>
+        </geräte>
+    </labor>
+</hochschule>
