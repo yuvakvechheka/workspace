@@ -18,6 +18,13 @@
 		<item value="450" key="AvailableNameColumnWidth"/>
 		<item value="false" key="FilterOnEnv"/>
 	</section>
+	<section name="org.eclipse.equinox.internal.p2.ui.dialogs.UpdateWizard.WizardSettings">
+		<item value="883" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="532" key="DIALOG_HEIGHT"/>
+		<item value="527" key="DIALOG_X_ORIGIN"/>
+		<item value="174" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.equinox.internal.p2.ui.dialogs.InstallWizard.ResolutionResultsPage">
 		<item value="200" key="DetailsSashWeight"/>
 		<item value="400" key="NameColumnWidth"/>
@@ -25,11 +32,25 @@
 		<item value="200" key="IDColumnWidth"/>
 		<item value="800" key="ListSashWeight"/>
 	</section>
+	<section name="org.eclipse.equinox.internal.p2.ui.dialogs.UpdateWizard.ResolutionResultsPage">
+		<item value="200" key="DetailsSashWeight"/>
+		<item value="400" key="NameColumnWidth"/>
+		<item value="200" key="VersionColumnWidth"/>
+		<item value="200" key="IDColumnWidth"/>
+		<item value="800" key="ListSashWeight"/>
+	</section>
 	<section name="org.eclipse.equinox.internal.p2.ui.dialogs.InstallWizard.WizardSettings">
-		<item value="871" key="DIALOG_WIDTH"/>
-		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
-		<item value="663" key="DIALOG_HEIGHT"/>
-		<item value="205" key="DIALOG_X_ORIGIN"/>
-		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="1124" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="717" key="DIALOG_HEIGHT"/>
+		<item value="449" key="DIALOG_X_ORIGIN"/>
+		<item value="109" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.equinox.internal.p2.ui.dialogs.UpdateWizard.SelectableIUsPage">
+		<item value="200" key="DetailsSashWeight"/>
+		<item value="360" key="NameColumnWidth"/>
+		<item value="120" key="VersionColumnWidth"/>
+		<item value="240" key="IDColumnWidth"/>
+		<item value="800" key="ListSashWeight"/>
 	</section>
 </section>

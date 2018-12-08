@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="jdk.internal.org.xml.sax.helpers.DefaultHandler"/>
-    <fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.xsltc.runtime.Attributes"/>
-    <fullyQualifiedTypeName name="jdk.internal.org.xml.sax.SAXException"/>
-    <fullyQualifiedTypeName name="org.xml.sax.helpers.DefaultHandler"/>
-    <fullyQualifiedTypeName name="org.xml.sax.SAXException"/>
-    <fullyQualifiedTypeName name="java.util.jar.Attributes"/>
-    <fullyQualifiedTypeName name="org.xml.sax.Attributes"/>
-    <fullyQualifiedTypeName name="javax.xml.parsers.SAXParserFactory"/>
-    <fullyQualifiedTypeName name="org.xml.sax.XMLReader"/>
-    <fullyQualifiedTypeName name="javax.xml.parsers.SAXParser"/>
-    <fullyQualifiedTypeName name="java.net.ContentHandler"/>
-    <fullyQualifiedTypeName name="org.xml.sax.ContentHandler"/>
+<fullyQualifiedTypeName name="jdk.internal.org.xml.sax.helpers.DefaultHandler"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.xsltc.runtime.Attributes"/>
+<fullyQualifiedTypeName name="jdk.internal.org.xml.sax.SAXException"/>
+<fullyQualifiedTypeName name="org.xml.sax.helpers.DefaultHandler"/>
+<fullyQualifiedTypeName name="org.xml.sax.SAXException"/>
+<fullyQualifiedTypeName name="java.util.jar.Attributes"/>
+<fullyQualifiedTypeName name="org.xml.sax.Attributes"/>
+<fullyQualifiedTypeName name="javax.xml.parsers.SAXParserFactory"/>
+<fullyQualifiedTypeName name="org.xml.sax.XMLReader"/>
+<fullyQualifiedTypeName name="javax.xml.parsers.SAXParser"/>
+<fullyQualifiedTypeName name="java.net.ContentHandler"/>
+<fullyQualifiedTypeName name="org.xml.sax.ContentHandler"/>
 </qualifiedTypeNameHistroy>
